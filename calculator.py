@@ -24,10 +24,10 @@ def ler_numero(mensagem):# definindo a função ler número que vai ler o númer
             return float(entrada)
         except ValueError:
             print("Valor inválido. Digite um número inteiro ou com vírgula/ponto.  ")
-n1=ler_numero("Digite o primeiro número: ")
-n2=ler_numero("Digite o segundo número:  ")
+n1=ler_numero("Digite o primeiro número: ") #Lendo primeiro número
+n2=ler_numero("Digite o segundo número:  ") #Lendo o segundo número
 while True:
-    print(20 * "-", " MENU DE OPERAÇÕES DISPONIVEIS" ,20 * "-")
+    print(20 * "-", " MENU DE OPERAÇÕES DISPONIVEIS" ,20 * "-") #mostrando o Menu de operações
     print("[1] +(SOMA)")
     print("[2] -(SUBTRAÇÃO)")
     print("[3] *(MULTIPLICAÇÃO)")
@@ -38,7 +38,7 @@ while True:
     print("[8] (SAIR DO PROGRAMA)")
 
     opcao=int(input("Escolha uma das opções do menu: "))
-    if opcao<1 or opcao>8:
+    if opcao<1 or opcao>8: 
         print("Opção invailda. Tente novamente. ")
         continue
     if opcao==1:
@@ -51,8 +51,8 @@ while True:
         multi= n1*n2
         print(f"{n1} * {n2} = {multi}")
     elif opcao==4:
-        divisao = n1/n2
         if n2 != 0:
+            divisao = n1/n2
             print(f"{n1} / {n2} = {divisao}")
         else:
             print("ERRO: Divisão por zero!!")
@@ -60,19 +60,18 @@ while True:
         potencia=n1**n2
         print(f"{n1} ** {n2} = {potencia}")
     elif opcao==6:
-        diviint=n1//n2
-        if opcao!=0:
+        if n2!=0:
+            diviint=n1//n2
             print(f"{n1} // {n2} = {diviint}")
         else:
             print("ERRO: Divisão por zero!!")
     elif opcao==7:
-        restodiv= n1%n2
         if n2!=0:
+            restodiv= n1%n2
             print(f"{n1} % {n2}= {restodiv}")
         else:
             print("ERRO: Divisão por zero!!")
     else:
-        opcao==8
         print("Saindo do programa...")
         print("FOI UM PRAZER TE AJUDAR :)")
         break
